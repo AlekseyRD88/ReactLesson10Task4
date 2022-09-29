@@ -4,8 +4,7 @@ import ProductRow from './ProductRow.jsx';
 
 class ProductTable extends Component {
   render() {
-    const filterText = this.props.filterText;
-    const inStockOnly = this.props.inStockOnly;
+    const { filterText , inStockOnly }= this.props;
     const rows = [];
     let lastCategory = null;
     this.props.products.forEach((product) => {

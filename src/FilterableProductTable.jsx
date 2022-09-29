@@ -20,17 +20,18 @@ class FilterableProductTable extends Component {
       });
     }
     render() {
+      const { filterText, inStockOnly}= this.state;
       return(
         <div>
           <SearchBar 
-            filterText={this.state.filterText}
-            inStockOnly={this.state.inStockOnly}
+            filterText={filterText}
+            inStockOnly={inStockOnly}
             onFilterTextChange={this.handleFilterTextChange}
             onInStockChange={this.handleInStockChange}/>
           <ProductTable 
-            products={this.props.product}
-            filterText={this.state.filterText}
-            inStockOnly={this.state.inStockOnly}/>
+            products={this.props.products}
+            filterText={filterText}
+            inStockOnly={inStockOnly}/>
         </div>
       );
     }
